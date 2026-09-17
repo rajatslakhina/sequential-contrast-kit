@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Menlo, Consolas, monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="560" fill="#0d1117"/>
+  <text x="30" y="38" fill="#e6edf3" font-size="20" font-weight="bold">SequentialContrastKit &#8212; one construction, two ways to spend it</text>
+  <text x="30" y="60" fill="#8b949e" font-size="12">a time-uniform interval for p&#7505; &#8722; p&#7495;, with and without the pairing</text>
+
+  <rect x="325" y="86" width="250" height="44" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="450" y="113" fill="#3fb950" font-size="12" text-anchor="middle">protocol SequentialContrast</text>
+
+  <rect x="60" y="176" width="350" height="126" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="235" y="200" fill="#58a6ff" font-size="15" text-anchor="middle" font-weight="bold">PairedContrastSequence</text>
+  <text x="235" y="222" fill="#8b949e" font-size="11" text-anchor="middle">&#916; = d &#183; (2&#952; &#8722; 1)</text>
+  <text x="235" y="242" fill="#8b949e" font-size="11" text-anchor="middle">d&#160;&#160;from every item&#160;&#160;&#8212;&#160;&#160;alpha/2</text>
+  <text x="235" y="260" fill="#8b949e" font-size="11" text-anchor="middle">&#952;&#160;&#160;from discordant items only&#160;&#160;&#8212;&#160;&#160;alpha/2</text>
+  <text x="235" y="284" fill="#d29922" font-size="11" text-anchor="middle">can exclude zero while the margins overlap</text>
+
+  <rect x="490" y="176" width="350" height="126" rx="6" fill="#161b22" stroke="#a371f7" stroke-width="1.5"/>
+  <text x="665" y="200" fill="#a371f7" font-size="15" text-anchor="middle" font-weight="bold">UnpairedContrastSequence</text>
+  <text x="665" y="222" fill="#8b949e" font-size="11" text-anchor="middle">&#916; &#8712; [ L&#7505; &#8722; U&#7495; , U&#7505; &#8722; L&#7495; ]</text>
+  <text x="665" y="242" fill="#8b949e" font-size="11" text-anchor="middle">arm A&#160;&#160;&#8212;&#160;&#160;alpha/2</text>
+  <text x="665" y="260" fill="#8b949e" font-size="11" text-anchor="middle">arm B&#160;&#160;&#8212;&#160;&#160;alpha/2</text>
+  <text x="665" y="284" fill="#8b949e" font-size="11" text-anchor="middle">never can, and that is an identity</text>
+
+  <path d="M420 130 L250 176" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M480 130 L650 176" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="325" y="340" width="250" height="66" rx="6" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="450" y="364" fill="#58a6ff" font-size="13" text-anchor="middle" font-weight="bold">MixtureRateSequence</text>
+  <text x="450" y="384" fill="#8b949e" font-size="10" text-anchor="middle">M&#8345;(p) = B(a+k, b+n&#8722;k) / B(a,b) / p&#7495;(1&#8722;p)&#8319;&#8315;&#7495;</text>
+  <text x="450" y="399" fill="#8b949e" font-size="10" text-anchor="middle">Robbins beta mixture &#183; Ville's inequality</text>
+
+  <path d="M235 302 L420 340" stroke="#8b949e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M665 302 L480 340" stroke="#8b949e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="450" y="330" fill="#8b949e" font-size="10" text-anchor="middle">both built from</text>
+
+  <rect x="40" y="444" width="250" height="86" rx="6" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="165" y="468" fill="#d29922" font-size="13" text-anchor="middle" font-weight="bold">actor ContrastMonitor</text>
+  <text x="165" y="488" fill="#8b949e" font-size="10" text-anchor="middle">folds PairedOutcome one item at a time</text>
+  <text x="165" y="504" fill="#8b949e" font-size="10" text-anchor="middle">reports BOTH readings from one tally</text>
+  <text x="165" y="520" fill="#8b949e" font-size="10" text-anchor="middle">records the first trial that excludes</text>
+
+  <rect x="325" y="444" width="250" height="86" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="450" y="468" fill="#f85149" font-size="13" text-anchor="middle" font-weight="bold">ContrastExclusionSolver</text>
+  <text x="450" y="488" fill="#8b949e" font-size="10" text-anchor="middle">exact lattice walk, no simulation</text>
+  <text x="450" y="504" fill="#8b949e" font-size="10" text-anchor="middle">miscoverage &#183; detection &#183; first trial</text>
+  <text x="450" y="520" fill="#8b949e" font-size="10" text-anchor="middle">expected width, both constructions</text>
+
+  <rect x="610" y="444" width="250" height="86" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="735" y="468" fill="#3fb950" font-size="13" text-anchor="middle" font-weight="bold">ComponentTable</text>
+  <text x="735" y="488" fill="#8b949e" font-size="10" text-anchor="middle">O(n&#179;) difference readings cost</text>
+  <text x="735" y="504" fill="#8b949e" font-size="10" text-anchor="middle">O(n&#178;) root-findings, because the</text>
+  <text x="735" y="520" fill="#8b949e" font-size="10" text-anchor="middle">paired reading factors through two</text>
+</svg>
